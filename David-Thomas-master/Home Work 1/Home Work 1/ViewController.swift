@@ -9,20 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-@IBOutlet weak var label: UILabel!
-    
-    @IBOutlet weak var textField: UITextField!
-    @IBAction func button(_ sender: Any) {
-    label.text = textField.text;
+    @IBOutlet weak var Label01: UILabel!
+    @IBOutlet weak var Label02: UILabel!
+    @IBOutlet weak var TextField01: UITextField!
+    @IBOutlet weak var TextField02: UITextField!
+    @IBOutlet weak var HiddenText: UILabel!
+    @IBAction func Button01(_ sender: Any) {
+        Label01.text = TextField01.text;
     }
-    
-    @IBOutlet weak var label2: UILabel!
-    
-    
-    @IBOutlet weak var textField2: UITextField!
-    @IBAction func button2(_ sender: Any) {
-        label2.text = textField2.text;
+    @IBAction func Button02(_ sender: Any) {
+        Label02.text = TextField02.text;
+    }
+    @IBAction func Reset(_ sender: Any) {
+        Label01.text = "Find the"
+        Label02.text = "Hidden button"
+        HiddenText.text = ""
+    }
+    @IBAction func HiddenButton(_ sender: Any) {
+        HiddenText.text = "YA DONE IT"
     }
     
     
